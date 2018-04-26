@@ -1,0 +1,22 @@
+<svg width="489.597" height="524.424" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" opacity="0.39" d="m93.008,111.089l211.46,0c19.4,0 35.127,16.308 35.127,36.424l0,118.856c0,20.115 -15.727,36.424 -35.127,36.424l-54.67,0l26.41,73.03l-87.382,-73.03l-95.818,0c-19.399,0 -35.126,-16.309 -35.126,-36.424l0,-118.856c0,-20.116 15.727,-36.424 35.126,-36.424z"/>
+  <path id="svg_3" opacity="0.39" d="m427.83,279.377l-184.321,0c-16.909,0 -30.617,13.64 -30.617,30.466l0,99.416c0,16.825 13.708,30.465 30.617,30.465l47.655,0l-23.021,61.085l76.168,-61.085l83.52,0c16.91,0 30.619,-13.64 30.619,-30.465l0,-99.416c-0.001,-16.826 -13.71,-30.466 -30.62,-30.466z"/>
+  <path id="svg_5" stroke-width="16" stroke-linejoin="round" stroke="#b2b2b2" fill="#FFFFFF" d="m416.128,249.097l-194.194,0c-17.816,0 -32.258,14.442 -32.258,32.258l0,105.264c0,17.815 14.442,32.258 32.258,32.258l50.206,0l-24.254,64.678l80.248,-64.678l87.994,0c17.816,0 32.258,-14.442 32.258,-32.258l0,-105.264c0,-17.816 -14.441,-32.258 -32.258,-32.258z"/>
+  <line id="svg_6" y2="291.137" y1="291.137" x2="230.092" x1="411.199" stroke-width="16" stroke-linejoin="round" stroke="#b2b2b2" fill="#FFFFFF"/>
+  <line id="svg_7" y2="316.657594" y1="316.657594" x2="230.092" x1="411.199" stroke-width="16" stroke-linejoin="round" stroke="#b2b2b2" fill="#FFFFFF"/>
+  <line id="svg_8" y2="345.714594" y1="345.714594" x2="230.092" x1="411.199" stroke-width="16" stroke-linejoin="round" stroke="#b2b2b2" fill="#FFFFFF"/>
+  <line id="svg_9" y2="373.250594" y1="373.250594" x2="230.092" x1="411.199" stroke-width="16" stroke-linejoin="round" stroke="#b2b2b2" fill="#FFFFFF"/>
+  <path id="svg_11" stroke-width="18" stroke-linejoin="round" stroke="#4c4c4c" fill="#FFFFFF" d="m90.358,66.174l244.39,0c22.42,0 40.596,18.176 40.596,40.596l0,132.47c0,22.422 -18.176,40.597 -40.596,40.597l-63.184,0l30.523,81.396l-100.99,-81.396l-110.739,0c-22.421,0 -40.596,-18.175 -40.596,-40.597l0,-132.47c0,-22.42 18.175,-40.596 40.596,-40.596z"/>
+  <line id="svg_12" y2="119.081" y1="119.081" x2="324.48" x1="96.564" stroke-width="18" stroke-linejoin="round" stroke="#4c4c4c" fill="none"/>
+  <line id="svg_13" y2="153.734" y1="153.734" x2="324.48" x1="96.564" stroke-width="18" stroke-linejoin="round" stroke="#4c4c4c" fill="none"/>
+  <line id="svg_14" y2="190.302" y1="190.302" x2="324.48" x1="96.564" stroke-width="18" stroke-linejoin="round" stroke="#4c4c4c" fill="none"/>
+  <line id="svg_15" y2="222.939594" y1="222.939594" x2="324.48" x1="96.564" stroke-width="18" stroke-linejoin="round" stroke="#4c4c4c" fill="none"/>
+ </g>
+</svg>

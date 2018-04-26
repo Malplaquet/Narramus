@@ -1,0 +1,511 @@
+@font-face {
+  font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: bold;
+  src: url('../fonts/Raleway/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  src: url('../fonts/Raleway/Raleway-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-weight: bold;
+  font-style: italic;
+  src: url('../fonts/Raleway/Raleway-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Rokkitt';
+    src: url('../fonts/Rokkitt/Rokkitt-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  src: url('../fonts/Rokkitt/Rokkitt-Bold.ttf');
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.hautpage{
+  background-image: url("../img/photo-1508830524289-0adcbe822b40.jpg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: white;
+  font-size: 65px;
+  margin : 20px 0;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h2{
+  font-size: 4em;
+}
+
+.soustitre{
+  color: white;
+  font-size: 45px;
+  margin: 20px 0;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+.navbarre {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  background-color: black;
+}
+
+nav a {
+  font-size: 1.1em;
+  color : white;
+  text-decoration: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+nav a:hover{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.titre_section{
+  font-family: 'Raleway', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  width: 100%;
+  height: 20em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 2em;
+}
+
+#formations, #expériences{
+  background-image: url("../img/business-computer-internet-60626_redim.jpg");
+  background-attachment: fixed;
+  background-position: 30% 50%;
+}
+
+#compétences, #loisirs, #contacts{
+  background-image: url("../img/chris-ried-521588-unsplash_redim.jpg");
+  background-attachment: fixed;
+  background-position: 100% 80%;
+}
+
+.sous-titres_sections{
+  font-family: 'Raleway', Arial, sans-serif;
+  letter-spacing: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1em 0 1em 0;
+}
+
+.àpropos{
+  font-family: 'Rokkitt', serif;
+  font-size: 1.2em;
+  text-align: justify;
+  margin: 5em 3em;
+  padding: 0;
+}
+
+.titre_bio{
+  margin-left: 4em;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.infobulle{
+  margin-left: 4em;
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-around;
+  height: 5em;
+}
+
+.icon_infobulle{
+  width: 4em;
+}
+
+.tooltip_top{
+  position: relative;
+}
+
+.tooltip_top:hover:after, .tooltip_top:focus:after{
+  content: attr(aria-label); /*on affiche l'aria-label au passage de la souris*/
+  position: absolute;
+  top: -1.5em; /*on décale vers le haut pour sortir le texte de la zone couverte par l'image */
+  left: 50%;
+  padding: 0 10px;
+  transform: translateX(-50%); /*on centre horizontalement*/
+  z-index: 100; /* pour le mettre au premier plan */
+  white-space: nowrap; /* on interdit le retour à la ligne */
+  background-color: rgb(77, 0, 77);
+  border-radius: 1em;
+  color: white;
+}
+
+.tooltip_top:hover:before,
+.tooltip_top:focus:before {
+  content: "▼";
+  position: absolute;
+  top: -0.5em;
+  left: 49%;
+	transform: translateX(-50%);
+  color: rgb(77, 0, 77);
+}
+
+.tooltip_bottom{
+  position: relative;
+}
+
+.tooltip_bottom:hover:after, .tooltip_bottom:focus:after{
+  content: attr(aria-label);
+  position: absolute;
+  top: 4.8em;
+  left: 50%;
+  padding: 0 10px;
+  transform: translateX(-50%);
+  z-index: 100;
+  white-space: nowrap;
+  background-color: rgb(77, 0, 77);
+  border-radius: 1em;
+  color: white;
+}
+
+.tooltip_bottom:hover:before,
+.tooltip_bottom:focus:before {
+  content: "▲";
+  position: absolute;
+  top: 3.8em;
+  left: 49%;
+	transform: translateX(-50%);
+  color: rgb(77, 0, 77);
+}
+
+.bio{
+  margin-left: 4em;
+  font-size: 1.2em;
+}
+
+.cadre_àpropos{
+  background-color: rgb(51, 0, 51);
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  margin-left: 4em;
+  padding: 1em;
+}
+
+.bordure{
+  padding: 0 2em;
+  border-style: dashed;
+  border-width: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon_id{
+  width: 6em;
+  align-self: center;
+}
+
+.puce{
+  height: 1.5em;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover{
+  text-decoration: underline dashed;
+  color: inherit;
+  font-weight: bold;
+}
+
+.dl_CV{
+  text-decoration: none;
+  color: inherit;
+}
+
+.dl_CV:hover{
+  text-decoration: underline dashed;
+  color: inherit;
+  font-weight: bold;
+}
+
+.formations{
+  font-family: 'Rokkitt';
+  font-size: 1.2em;
+  text-align: center;
+  margin: 2em 3em;
+  padding: 0;
+}
+
+.colonne{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.année{
+  padding: 0.5em;
+  border: double rgba(51, 0, 51);
+  border-width: 0.3em;
+}
+
+.titre_formation{
+  font-size: 1.3em;
+}
+
+.master{
+  font-size: 1.1em;
+}
+
+.expériences{
+  font-family: 'Rokkitt';
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 3em 4em 3em;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.icon_flex{
+  display: flex;
+  justify-content: center;
+  margin : 1em 0 1em 0;
+}
+
+.icon{
+  width: auto;
+  height: 5em;
+  margin-bottom: 1em;
+}
+
+.col1{
+  text-align: right;
+  margin-left: 6em;
+  font-size: 1.1em;
+}
+
+.col2{
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.col3{
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.col4{
+  text-align: justify;
+  margin-left: 4em;
+  font-size: 1.1em;
+}
+
+.img_réal{
+  display: block;
+  height: 17em;
+  margin-bottom: 0;
+}
+
+.title_projet{
+  font-size: 1.5em;
+  padding: 2em;
+}
+
+.txt_projet{
+  padding: 2em;
+}
+
+.compétences{
+  font-family: 'Rokkitt';
+  font-size: 1.2em;
+  text-align: justify;
+  margin: 2em 3em;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.categories{
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo{
+  width: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.loisirs{
+  font-family: 'Rokkitt';
+  font-size: 1.2em;
+  text-align: justify;
+  margin: 7em 3em;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.portfolio-box{
+  position: relative;
+}
+
+.img_loisirs{
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: rgba(77, 0, 77,0.9);
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.text{
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 2em;
+  text-align: justify;
+}
+
+.title_portfolio{
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.titre_ouvrage{
+  font-style: italic;
+}
+
+.contacts{
+  font-family: 'Rokkitt';
+  font-size: 1.2em;
+  text-align: justify;
+  margin: 4em 3em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon_contacts{
+  height: 4em;
+}
+
+.tooltip_phone{
+  position: relative;
+}
+
+.tooltip_phone:hover:after, .tooltip_phone:focus:after{
+  content: attr(aria-label);
+  position: absolute;
+  top: -3.5em;
+  left: 50%;
+  padding: 0 10px;
+  transform: translateX(-50%);
+  z-index: 100;
+  white-space: nowrap;
+  background-color:rgb(77, 0, 77);
+  border-radius: 1em;
+  color: white;
+}
+
+.tooltip_phone:hover:before,
+.tooltip_phone:focus:before {
+  content: "▼";
+  position: absolute;
+  top: -2.4em;
+  left: 49%;
+	transform: translateX(-50%);
+  color: rgb(77, 0, 77);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.nom_famille{
+  text-transform: uppercase;
+}

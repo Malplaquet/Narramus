@@ -1,0 +1,536 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Mina';
+  src: url('../fonts/Mina/Mina-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mina';
+  font-weight: bold;
+  src: url('../fonts/Mina/Mina-Bold.ttf');
+}
+
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header{
+  height: 150px;
+}
+
+@media screen and (orientation: portrait){
+  .banner{
+    padding: 2px 5%;
+    font-family: 'Mina', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    background-image: url(../img/no-person-3091208.jpg);
+    background-size: cover;
+    background-position: 0% 90%;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (orientation: landscape){
+  .banner{
+    padding: 2px 5%;
+    font-family: 'Mina', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    background-image: url(../img/no-person-3091208.jpg);
+    background-size: cover;
+    background-position: 0% 81%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (orientation: portrait){
+  div h1{
+    color: #e67e22;
+    font-size: 45px;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (orientation: landscape){
+  div h1{
+    color: #e67e22;
+    font-size: 2.6em;
+    padding-top: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+@media screen and (orientation: portrait){
+  .soustitre{
+    margin: 1em 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding-left: 1.2em;
+    margin-top: 0.6em;
+  }
+}
+
+@media screen and (orientation: landscape){
+  .soustitre{
+    margin: 0.9em 0;
+    font-size: 0.9em;
+    padding-left: 1.2em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (orientation: portrait){
+  .nav_barre{
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  align-items: center;
+  background-color: #6ab04c;
+  }
+}
+
+@media screen and (orientation: landscape){
+  .nav_barre{
+  height: 2.5em;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  align-items: center;
+  background-color: #6ab04c;
+  margin-top: -0.1em;
+  }
+}
+
+.link_nav_barre{
+  text-decoration: none;
+  color: #2C3A47;
+  font-size: 1em;
+}
+
+.corps{
+  background-color: #d2dae2;
+}
+
+.bloc_texte{
+  width: 90%;
+  background-color: white;
+  margin: auto;
+  border: 0.05px solid white;
+}
+
+.narramus{
+  margin: 0.5em;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.9em;
+}
+
+.titre_narramus{
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+
+/*@media screen and (orientation: portrait){*/
+  .sommaire{
+    margin: 1em;
+    }
+/*}*/
+
+/*@media screen and (orientation: landscape){
+  .sommaire{
+    margin: 1em;
+    display: flex;
+  }
+}*/
+
+.titre_sommaire{
+  margin-bottom: 0;
+  padding: 0.6em 1.2em 0.6em 0.5em;
+  text-align: left;
+  text-indent: 0.6em;
+  font-family: 'Mina', Arial, sans-serif;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.publication_traversee{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: justify;
+  padding-bottom: 0.6em;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.publication_vian{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: justify;
+  padding-bottom: 0.6em;
+  font-style: italic;
+}
+
+.illustration_traversee{
+  width: 100%;
+}
+
+.illustration_Vian{
+  width: 100%;
+}
+
+.txt_publi{
+  margin-top: 2em;
+  margin-right: 3em;
+}
+
+.titre_intro{
+  font-family: 'Mina', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.intro_publi{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9em;
+}
+
+@media screen and (orientation:portrait){
+  .sticky_footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #030216;
+    color: white;
+  }
+}
+
+@media screen and (orientation:landscape){
+  .sticky_footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #030216;
+  color: white;
+  }
+}
+
+@media screen and (orientation:portrait){
+  .link_bottom_nav{
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: white;
+  }
+}
+
+@media screen and (orientation:landscape){
+.link_bottom_nav{
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  letter-spacing: 0;
+  color: white;
+  }
+}
+/* à_propos.html */
+.corps{
+  background-color: #d2dae2;
+}
+
+.presentation{
+  text-align: justify;
+  padding: 1.2em 1em 1.2em 1em;
+}
+
+.nom_prenom{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.Alexia{
+  display: flex;
+  font-size: 15px;
+}
+
+.illustration_Alexia{
+  width: 100px;
+  margin-left: 10px;
+  display: none;
+}
+
+.Pierre{
+  display: flex;
+  font-size: 15px;
+}
+
+.illustration_Pierre{
+  width: 300px;
+  margin-left: 15px;
+  display: none;
+}
+
+.Cyril{
+  display: flex;
+  font-size: 15px;
+}
+
+.illustration_Cyril{
+  width: 350px;
+  display: none;
+}
+
+.credit_photo{
+  text-align: justify;
+  padding: 1.2em 1em 1.2em 1em;
+}
+
+/* contacts.html*/
+.mail{
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
+  color: inherit;
+}
+
+/* réseaux.html */
+.reseaux{
+  font-size: 1em;
+  text-indent: 2em;
+  line-height: 1.7em;
+}
+
+/* billets.html*/
+.empty{
+  text-align: justify;
+  padding: 1.2em 1em 1.9em 1em;
+  font-size: 1.1em;
+}
+
+
+/*article*/
+.article{
+  text-align: justify;
+  padding: 1.2em 1em 1.9em 1em;
+  font-size: 1.1em;
+}
+
+.illustration_article_containeur{
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (orientation: portrait){
+  .illustration_article_Vian{
+    width: 95%;
+    max-height: 230px;
+  }
+}
+
+
+@media screen and (orientation:landscape){
+  .illustration_article_Vian{
+    width: 95%;
+    max-height: 40 0px;
+  }
+}
+
+.legende_illustration{
+  text-align: justify;
+  font-size: 10px;
+  text-indent: 0px;
+  margin: 0px;
+  line-height: 10px;
+}
+
+.legende{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.credit{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.date_publi{
+  text-indent: 0;
+  font-size: 12px;
+}
+
+.titre_article{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+article p{
+  text-indent: 30px;
+  line-height: 25px;
+}
+
+.titre_oeuvre{
+  font-style: italic;
+}
+
+.lyrics{
+  font-style: italic;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+}
+
+.signature{
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* article traversée ennivrante*/
+.galerie{
+  padding: 1em 1em 1em 1em;
+  font-size: 1em;
+}
+
+.accordion{
+  width: 100%;
+  height: 3em;
+  text-align: left;
+  font-family: 'Mina', Arial, sans-serif;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding-left: 2em;
+}
+
+.accordion:after {
+  content: "\002B";
+  float: right;
+  padding-right: 1em;
+  border: none;
+}
+
+.active:after {
+  content: "\2212";
+  padding-right: 1em;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+  border: none;
+}
+
+.acte{
+  display: grid;
+  max-width: 100%;
+  display: none;
+}
+
+.appeared {
+  display: grid;
+}
+
+.img_acte{
+  max-width: 100%;
+}
+
+.transcription{
+  font-size: 1em;
+  line-height: 1.5em;
+  text-indent: 0;
+  padding: 1em;
+  margin: 0;
+}
+
+.intro{
+  margin: 0;
+  padding: 1em;
+  font-size: 1em;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.date_publi_traversee{
+  text-indent: 0;
+  font-size: 0.9em;
+  padding-left: 2em;
+  padding-top: 2em;
+  margin-top: 0;
+}
+
+.titre_article_traversee{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.notes_bas_page{
+  text-indent: 2em;
+  text-align: justify;
+  padding: 0 1em 0.5em 1em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.link_in_page{
+  color: inherit;
+}
+
+h4{
+  text-indent: 1em;
+  font-size: 1.2em;
+}
+
+.bibliographie{
+  text-align: justify;
+  font-size: 1em;
+  padding: 0 1em 0.5em 1em;
+  line-height: 2em;
+}
