@@ -24,13 +24,13 @@ a:hover{
   text-decoration: none;
   color: inherit;
 }
-
 body{
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
+/* INCLUDE HEADER.php */
 .header{
   height: 250px;
 }
@@ -52,35 +52,93 @@ div h1{
   font-size: 3.7em;
   margin-bottom: 1.7rem;
 }
-
 .link{
   text-decoration: none;
   color: inherit;
 }
-
 .soustitre{
   margin: 1.2em 0 1.9em 0;
   padding-left: 1.2em;
   font-size: 1.3rem;
 }
-
+.icon_account{
+  height: 2em;
+}
 .nav_barre{
-  height: 3.1em;
+  height: 3em;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #6ab04c;
+  background-color: #2c2c54;
 }
-
 .link_nav_barre{
   text-decoration: none;
-  color: #2C3A47;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1.1em;
+  margin: 1em;
+  letter-spacing: 0.1em;
 }
-
+.link_nav_barre:hover{
+  font-weight: bold;
+  color: white;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* INCLUDE CONNEXION.php */
+.title_connexion{
+  margin: 1em 0;
+  font-size: 2em;
+  color: red;
+  font-family: 'Mina', Arial, sans-serif;
+}
+.form_connexion{
+  margin: 1em 3em 5em 3em;
+}
+.text_form{
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: 1em;
+}
+.input_pseudo{
+  margin-bottom: 1em;
+  font-style: italic;
+}
+.input_pass{
+  margin-bottom: 1em;
+  font-style: italic;
+}
+.button_connexion{
+  height: 2em;
+  width: 8em;
+  margin-top: 1em;
+  color:#f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.redir_create_account{
+  margin: 1em 3em 5em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button_create_account{
+  height: 2em;
+  color: #f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_create_account:hover{
+  font-weight: bold;
+}
+/* PAGE php */
 .corps{
-  background-color: #d2dae2;
+  background-color: #aaa69d;
 }
 
 .bloc_texte{
@@ -181,28 +239,22 @@ div h1{
 .link_bottom_nav{
   text-decoration: none;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   letter-spacing: 2px;
   color: white;
   padding: 0.5em 0 0 9em;
 }
 
-
 /* a_propos.html */
-.corps{
-  background-color: #d2dae2;
-}
-
 .presentation{
   font-size: 1.1em;
   text-align: justify;
-  padding: 2.5em 1.9em 1.9em 1.9em;
+  margin: 2.5em 1.9em 1.9em 1.9em;
 }
 
 .nom_prenom{
   font-size: 1.7em;
   font-weight: bold;
-  font-family: 'Mina', Arial, sans-serif;
   letter-spacing: 1px;
 }
 
@@ -211,27 +263,9 @@ div h1{
   font-size: 1.1em;
 }
 
-.illustration_Alexia{
-  height: 200px;
-  width: 190px;
-  margin-left: 1.2em;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-
 .Pierre{
   display: flex;
   font-size: 1.1em;
-}
-
-.illustration_Pierre{
-  width: 300px;
-  margin-left: 1em;
-  margin-right: 1em;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
 }
 
 .Cyril{
@@ -239,27 +273,63 @@ div h1{
   font-size: 1.1em;
 }
 
-.illustration_Cyril{
-  height: 200px;
-  /*width: 350px;*/
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-
 .credit_photo{
-  text-align: justify;
-  padding: 2.5em 1.9em 1.9em 1.9em;
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1.1em;
 }
 
 /* contacts.html*/
-.mail{
-  text-decoration: none;
-  font-weight: bold;
-  text-decoration: underline;
-  color: inherit;
+.titre_contact{
+  font-family: 'Mina', Arial, sans-serif;
+  color: black;
+  margin-top: 1em;
+  font-size: 4em;
 }
-
+.couv_contact{
+  height: 25em;
+}
+.formulaire{
+  text-align: center;
+}
+.soustitre_contact{
+  font-size: 1.7em;
+}
+.champ{
+  margin: 1em;
+  height: 2em;
+  width: 15em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+#message{
+  margin: 1em;
+  height: 12em;
+  width: 35em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+.button_contact{
+  height: 1.5em;
+  width: 5em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+}
+.titre_redir{
+  font-family: 'Mina', Arial, sans-serif;
+  color: black;
+  margin-top: 5em;
+  font-size: 2em;
+  text-align: center;
+}
+.soustitre_redir{
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
 /* réseaux.html */
 .reseaux{
   font-size: 1.2em;
@@ -347,7 +417,6 @@ article p{
   display: flex;
   justify-content: flex-end;
 }
-
 
 /* article traversée enivrante*/
 .galerie{
