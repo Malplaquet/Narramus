@@ -88,7 +88,7 @@ div h1{
   width: 100%;
   z-index: 100;
 }
-/* INCLUDE CONNEXION.php */
+/* CONNEXION.php */
 .title_connexion{
   margin: 1em 0;
   font-size: 2em;
@@ -111,6 +111,18 @@ div h1{
   margin-bottom: 1em;
   font-style: italic;
 }
+.button_deconnexion{
+  height: 2em;
+  width: 8em;
+  margin-top: 2em;
+  color:#f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_deconnexion:hover{
+  font-weight: bold;
+}
 .button_connexion{
   height: 2em;
   width: 8em;
@@ -119,6 +131,9 @@ div h1{
   background-color: #EA2027;
   border: none;
   border-radius: 10px;
+}
+.button_connexion:hover{
+  font-weight: bold;
 }
 .redir_create_account{
   margin: 1em 3em 5em 3em;
@@ -136,6 +151,13 @@ div h1{
 .button_create_account:hover{
   font-weight: bold;
 }
+
+/* DECONNEXION.php */
+.txt-deconnexion{
+  margin: 2em 3em;
+  font-size: 1.2em;
+}
+
 /* PAGE php */
 .corps{
   background-color: #aaa69d;

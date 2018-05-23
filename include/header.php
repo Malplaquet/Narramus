@@ -1,6 +1,6 @@
 <?php
-if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
-   echo $_SESSION['pseudo'];
+if (session_status() === PHP_SESSION_ACTIVE){ // vérifie si la session existe bien, renvoie un booléen, sans ça, le session destroy ne fait que désactiver le $_SESSION['pseudo'] sans le supprimer complétement
+   $echoAccount = $_SESSION['pseudo'];
  }
  ?>
 <!DOCTYPE html>
@@ -37,8 +37,10 @@ if (isset($_SESSION['id']) AND isset($_SESSION['pseudo'])){
       <a class="link_nav_barre" href="../../critique_film.php">Critique ciné/série</a>
     </div>
     <div>
-      <a class="link_nav_barre link_account" href="/include/connexion.php"><img class="icon_account" src="../../img/icon/icon_account-white.svg" alt=""><?php $echoAccount ?></a>
+      <a class="link_nav_barre link_account" href="../connexion.php"><img class="icon_account" src="../../img/icon/icon_account-white.svg" alt=""><?php if (isset($echoAccount)){
+        echo $echoAccount;
+      } else {
+        echo ' Mon Compte';
+      } ?></a>
     </div>
   </div>
-</body>
-</html>
