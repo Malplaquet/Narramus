@@ -1,0 +1,560 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Mina';
+  src: url('../fonts/Mina/Mina-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Mina';
+  font-weight: bold;
+  src: url('../fonts/Mina/Mina-Bold.ttf');
+}
+
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* INCLUDE HEADER.php */
+.header{
+  height: 250px;
+}
+
+.banner{
+  padding: 0.6em 15%;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 3px;
+  background-image: url("../img/no-person-3091208-redim.jpg");
+  background-size: cover;
+  background-position: 0% 86%;
+  max-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+div h1{
+  color: #d63031;
+  font-size: 3.7em;
+  margin-bottom: 1.7rem;
+}
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+.soustitre{
+  margin: 1.2em 0 1.9em 0;
+  padding-left: 1.2em;
+  font-size: 1.3rem;
+}
+.icon_account{
+  height: 2em;
+}
+.nav_barre{
+  height: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2c2c54;
+}
+.link_nav_barre{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  margin: 1em;
+  letter-spacing: 0.1em;
+}
+.link_nav_barre:hover{
+  font-weight: bold;
+  color: white;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* CONNEXION.php */
+.title_connexion{
+  margin: 1em 0;
+  font-size: 2em;
+  color: red;
+  font-family: 'Mina', Arial, sans-serif;
+}
+.form_connexion{
+  margin: 1em 3em 5em 3em;
+}
+.text_form{
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: 1em;
+}
+.input_pseudo{
+  margin-bottom: 1em;
+  font-style: italic;
+}
+.input_pass{
+  margin-bottom: 1em;
+  font-style: italic;
+}
+.button_deconnexion{
+  height: 2em;
+  width: 8em;
+  margin-top: 2em;
+  color:#f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_deconnexion:hover{
+  font-weight: bold;
+}
+.button_connexion{
+  height: 2em;
+  width: 8em;
+  margin-top: 1em;
+  color:#f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_connexion:hover{
+  font-weight: bold;
+}
+.redir_create_account{
+  margin: 1em 3em 5em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button_create_account{
+  height: 2em;
+  color: #f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_create_account:hover{
+  font-weight: bold;
+}
+
+/* DECONNEXION.php */
+.txt-deconnexion{
+  margin: 2em 3em;
+  font-size: 1.2em;
+}
+
+/* PAGE php */
+.corps{
+  background-color: #aaa69d;
+}
+
+.bloc_texte{
+  width: 80%;
+  background-color: white;
+  margin: auto;
+  border: 0.05px solid white;
+  padding-bottom: 1em;
+}
+
+.narramus{
+  width: 70%;
+  margin: auto;
+  padding-top: 1em;
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 1.9em;
+}
+
+.titre_narramus{
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.titre_sommaire{
+  font-family: 'Mina', Arial, sans-serif;
+  font-size: 1.7em;
+  text-indent: 1.5em;
+  margin-top: 2em;
+}
+
+.sommaire{
+  text-align: justify;
+}
+
+.publication_traversee{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.publication_vian{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.illustation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+}
+
+.illustration_traversee{
+  width: 100%;
+}
+
+.illustration_Vian{
+  width: 75%;
+}
+
+.txt_publi{
+  margin-top: 2em;
+  margin-right: 3em;
+}
+
+.titre_intro{
+  font-family: 'Mina', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.5em;
+  padding-top: 2em;
+}
+
+.intro_publi{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+.sticky_footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #030216;
+  color: white;
+}
+
+.link_bottom_nav{
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: white;
+  padding: 0.5em 0 0 9em;
+}
+
+/* a_propos.html */
+.presentation{
+  font-size: 1.1em;
+  text-align: justify;
+  margin: 2.5em 1.9em 1.9em 1.9em;
+}
+
+.nom_prenom{
+  font-size: 1.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.Alexia{
+  display: flex;
+  font-size: 1.1em;
+}
+
+.Pierre{
+  display: flex;
+  font-size: 1.1em;
+}
+
+.Cyril{
+  display: flex;
+  font-size: 1.1em;
+}
+
+.credit_photo{
+  text-align: center;
+  padding: 1.5em;
+  font-size: 1.1em;
+}
+
+/* contacts.html*/
+.titre_contact{
+  font-family: 'Mina', Arial, sans-serif;
+  color: black;
+  margin-top: 1em;
+  font-size: 4em;
+}
+.couv_contact{
+  height: 25em;
+}
+.formulaire{
+  text-align: center;
+}
+.soustitre_contact{
+  font-size: 1.7em;
+}
+.champ{
+  margin: 1em;
+  height: 2em;
+  width: 15em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+#message{
+  margin: 1em;
+  height: 12em;
+  width: 35em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+.button_contact{
+  height: 1.5em;
+  width: 5em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+}
+.titre_redir{
+  font-family: 'Mina', Arial, sans-serif;
+  color: black;
+  margin-top: 5em;
+  font-size: 2em;
+  text-align: center;
+}
+.soustitre_redir{
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 5em;
+  margin-top: 2em;
+}
+/* réseaux.html */
+.reseaux{
+  font-size: 1.2em;
+  text-indent: 3em;
+}
+
+/* billets.html*/
+.empty{
+  text-align: justify;
+  padding: 1.9em 8.1em 3.1em 6.2em;
+  font-size: 1.2em;
+}
+
+/*article Vian*/
+
+.article{
+  text-align: justify;
+  margin: 1.9em 8.1em 3.1em 6.2em;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+.illustration_article_containeur{
+  display: flex;
+  justify-content: center;
+}
+
+.illustration_article_Vian{
+  width: auto;
+  max-height: 500px;
+  border-radius: 1.9em;
+}
+
+.legende_illustration{
+  text-align: justify;
+  line-height: normal;
+  font-size: 0.8em;
+  text-indent: 0;
+  margin: 0;
+}
+
+.legende{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.credit{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.date_publi{
+  text-indent: 0;
+  font-size: 1em;
+}
+
+.titre_article{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2.5em;
+  padding-left: 1.2em;
+}
+
+article p{
+  text-indent: 3.1em;
+  line-height: 1.9em;
+}
+
+.titre_oeuvre{
+  font-style: italic;
+}
+
+.lyrics{
+  font-style: italic;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+}
+
+.signature{
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* article traversée enivrante*/
+.galerie{
+  padding: 0;
+  margin-right: 5em;
+  margin-left: 6em;
+}
+
+.date_publi_traversee{
+  text-indent: 0;
+  font-size: 1.1em;
+  padding-left: 3.1em;
+  padding-top: 3.1em;
+}
+
+.intro{
+  margin: 1.5em 8.1em 1.5em 6.2em;
+  padding: 0;
+  font-size: 1.2em;
+  text-indent: 3.1em;
+  text-align: justify;
+  line-height: 1.9em;
+}
+
+.accordion{
+  width: 100%;
+  height: 3em;
+  text-align: left;
+  font-family: 'Mina', Arial, sans-serif;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  padding-left: 2em;
+}
+
+.accordion:after {
+  content: "\002B";
+  float: right;
+  padding-right: 1em;
+  border: none;
+}
+
+.active:after {
+  content: "\2212";
+  padding-right: 1em;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+  border: none;
+}
+
+.acte{
+  display: grid;
+  max-width: 100%;
+  display: none;
+}
+
+.appeared {
+  display: grid;
+}
+
+.img_acte{
+  max-width: 100%;
+  grid-row-start: 1;
+  grid-column: 1;
+}
+
+.transcription{
+  font-size: 1.1em;
+  line-height: 2em;
+  text-indent: 0;
+  padding-left: 1.2em;
+  padding-top: 0;
+  padding-bottom: 0;
+  grid-row-start: 1;
+  grid-column: 2;
+  margin: 0;
+}
+
+.titre_article_traversee{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2.8em;
+  padding-left: 3.1em;
+}
+
+.notes_bas_page{
+  text-indent: 3em;
+  text-align: justify;
+  padding: 0 8.1em 0.5em 6.2em;
+  font-size: 1.1em;
+}
+
+.link_in_page{
+  color: inherit;
+  outline: none;
+}
+
+.renvoie_haut{
+  text-indent: 3em;
+  padding: 0 8.1em 0.5em 7em;
+  font-size: 1em;
+  color: inherit;
+  text-align: right;
+}
+
+h4{
+  text-indent: 4em;
+  font-size: 1.5em;
+}
+
+.bibliographie{
+  text-align: justify;
+  font-size: 1.1em;
+  padding: 0 8.1em 3.1em 6.2em;
+  line-height: 2em;
+}
