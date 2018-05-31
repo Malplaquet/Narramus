@@ -2,7 +2,7 @@
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 
-require __DIR__.'/../../../../vendor/autoload.php';
+require __DIR__.'/../../../vendor/autoload.php';
 
 $config = new Configuration();
 
