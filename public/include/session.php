@@ -8,7 +8,7 @@ require __DIR__.'/../../vendor/autoload.php';
 
 $config = new Configuration();
 
-include 'include/bddconnexion_local.php';
+include 'include/bddconnexion.php';
 
 $conn = DriverManager::getConnection($connectionParams, $config);
 
