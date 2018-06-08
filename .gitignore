@@ -1,2 +1,2 @@
-vendor/
-/public/include/bddconnexion.php
+vendor
+config.php
