@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<div class="corps">
+  <div class="bloc_texte">
+  <form class="form_write" action="writing-post.php" method="post">
+    <h3 class="title_writing_page">Choisir la catégorie de publication :</h3>
+    <select class="select_type_write" name="">
+      <option value="">Article</option>
+      <option value="">Billet d'humeur</option>
+      <option value="">Critique littéraire</option>
+      <option value="">Critique ciné/série</option>
+    </select>
+    <h3 class="title_writing_page">Rédiger ci-dessous votre publication :</h3>
+    <h4 class="sub_title_writing_page">Choisissez un titre :</h4>
+    <input class="write_title" type="text" name="" value="" placeholder="Titre de la publication" autofocus required>
+    <h4 class="sub_title_writing_page">Rédigez le corps de texte :</h4>
+    <textarea class="write_area" name="name" rows="10" cols="100" placeholder="Corps de la publication" required></textarea><br/>
+    <div class="button_send_writing">
+      <button class="write_button" type="submit" name="button">Envoyer</button>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
