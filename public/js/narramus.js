@@ -26,3 +26,5 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+CKEDITOR.replace( 'corps_publi' );

@@ -2,22 +2,25 @@
 {% block content %}
 <div class="corps">
   <div class="bloc_texte">
-  <form class="form_write" action="writing-post.php" method="post">
-    <h3 class="title_writing_page">Choisir la catégorie de publication :</h3>
-    <select class="select_type_write" name="">
-      <option value="">Article</option>
-      <option value="">Billet d'humeur</option>
-      <option value="">Critique littéraire</option>
-      <option value="">Critique ciné/série</option>
-    </select>
-    <h3 class="title_writing_page">Rédiger ci-dessous votre publication :</h3>
-    <h4 class="sub_title_writing_page">Choisissez un titre :</h4>
-    <input class="write_title" type="text" name="" value="" placeholder="Titre de la publication" autofocus required>
-    <h4 class="sub_title_writing_page">Rédigez le corps de texte :</h4>
-    <textarea class="write_area" name="name" rows="10" cols="100" placeholder="Corps de la publication" required></textarea><br/>
-    <div class="button_send_writing">
-      <button class="write_button" type="submit" name="button">Envoyer</button>
-    </div>
+    <form class="form_write" action="writing-post.php" method="post">
+      <label for="select_type" class="title_writing_page">Choisir la catégorie de publication :</label>
+      <select class="select_type_write" name="type_publi">
+        <option value="0">Article</option>
+        <option value="1">Billet d'humeur</option>
+        <option value="2">Critique littéraire</option>
+        <option value="3">Critique ciné/série</option>
+      </select><br/>
+      <label for="vignette">Vignette de la publication (max 1Mo)</label><br/>
+      <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+      <input type="file" name="img_vignette" value="vignette" required><br/>
+      <label for="alt">Description de la vignette (max 255 caractères) :</label><br/>
+      <input type="text" name="alt_vignette" placeholder="Description de la vignette" required><br/>
+      <label for="publication" class="title_writing_page">Rédiger ci-dessous votre publication :</label><br/>
+      <label for="title_publi" class="sub_title_writing_page">Choisissez un titre : (max 255 caractères)</label><br/>
+      <input class="write_title" type="text" name="titre_publi" placeholder="Titre de la publication" autofocus required><br/>
+      <label for="corps_publi" class="sub_title_writing_page">Rédigez le corps de texte :</label><br/>
+      <textarea class="write_area" name="corps_publi" rows="10" cols="100" placeholder="Corps de la publication" required></textarea><br/>
+      <input class="write_button" type="submit" name="button">
     </form>
   </div>
 </div>

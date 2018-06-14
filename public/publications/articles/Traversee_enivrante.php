@@ -6,7 +6,7 @@ require __DIR__.'/../../../vendor/autoload.php';
 
 $config = new Configuration();
 
-include __DIR__.'/../../include/bddconnexion.php';
+include __DIR__.'/../../include/config.php';
 include '/../../include/session.php';
 
 $conn = DriverManager::getConnection($connectionParams, $config);
