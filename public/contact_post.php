@@ -26,5 +26,6 @@ mail($to, $subject, $message, $headers);
 header('refresh:4; url=contact.php');
 
 echo $twig->render(
-  'contact_post.html.twig'
+  'contact_post.html.twig',
+  $twig_vars
 );

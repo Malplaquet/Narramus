@@ -16,5 +16,6 @@ $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
 echo $twig->render(
-  'critique_film.html.twig'
+  'critique_film.html.twig',
+  $twig_vars
 );

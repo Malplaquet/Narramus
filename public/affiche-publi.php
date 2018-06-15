@@ -15,7 +15,6 @@ $conn = DriverManager::getConnection($connectionParams, $config);
 $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
-echo $twig->render(
-  'billets.html.twig',
-  $twig_vars
-);
+$req=$conn->executeQuery('SELECT * FROM publication ORDER BY :date_writing', [
+  'date_writing' => 'asc'
+]);

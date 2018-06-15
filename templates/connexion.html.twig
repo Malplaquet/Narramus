@@ -3,7 +3,7 @@
 <div class="corps">
   <div class="bloc_texte">
     <div class="container">
-      <p class="txt-deconnexion">{{errorWrongPassOrPseudo}}</p>
+      <p class="txt-deconnexion">{{ error["errorWrongPassOrPseudo"] }}{{ status["connexion_ok"]}}</p>
       <form class="form_deconnexion" action="deconnexion.php" method="post">
         <button class="button_deconnexion" type="submit" name="button">Deconnexion</button>
       </form>

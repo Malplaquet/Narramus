@@ -16,5 +16,6 @@ $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
 echo $twig->render(
-  'inscription.html.twig'
+  'inscription.html.twig',
+  $twig_vars
 );

@@ -15,28 +15,30 @@ $conn = DriverManager::getConnection($connectionParams, $config);
 $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
-$req=$conn->prepare('SELECT id, pseudo, pass FROM members WHERE pseudo = :pseudo');
-$req->execute(array(
-  'pseudo' => $_POST['pseudo']));
+
+$req=$conn->executeQuery('SELECT * FROM members WHERE pseudo = :pseudo', [
+  'pseudo' => $_POST['pseudo'],
+]);
 $resultat = $req->fetch();
 
 $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
 
-$errorWrongPassOrPseudo = array();
-if(!$resultat){
-  $errorWrongPassOrPseudo = 'Mot de passe ou pseudo incorrect';
+if (!$resultat) {
+  $twig_vars['error']['errorWrongPassOrPseudo'] = 'Mot de passe ou pseudo incorrect';
+}
+else {
+  if ($isPasswordCorrect) {
+    $_SESSION['id'] = $resultat['id'];
+    $_SESSION['pseudo'] = $resultat['pseudo'];
+    $twig_vars['status']['connexion_ok'] = 'Vous êtes connecté(e)';
   }
-  else{
-    if($isPasswordCorrect){
-      $_SESSION['id'] = $resultat['id'];
-      $_SESSION['pseudo'] = $resultat['pseudo'];
-    }
-    else{
-      $errorWrongPassOrPseudo;
-    }
+  else {
+    $_SESSION["id"] = 0;
   }
+}
 $req->closeCursor();
 
 echo $twig->render(
-  'connexion.html.twig'
+  'connexion.html.twig',
+  $twig_vars
 );

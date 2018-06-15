@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 
@@ -16,17 +15,11 @@ $conn = DriverManager::getConnection($connectionParams, $config);
 $loader = new Twig_Loader_Filesystem(__DIR__.'/../../templates');
 $twig = new Twig_Environment($loader);
 
-$user = array();
-
-if (session_status() === PHP_SESSION_ACTIVE){ // vérifie si la session existe bien, renvoie un booléen, sans ça, le session_destroy ne fait que désactiver le $_SESSION['pseudo'] sans le supprimer complétement
-   $user = $_POST;
-   $user["active"] = true;
+if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION["pseudo"])) { // vérifie si la session existe bien, renvoie un booléen, sans ça, le session_destroy ne fait que désactiver le $_SESSION['pseudo'] sans le supprimer complétement
+   $twig_vars["user"]['pseudo'] = $_SESSION['pseudo'];
+   $twig_vars["user"]["active"] = true;
  }
  else {
-   $user['pseudo'] = "Mon compte";
-   $user["active"] = false;
+   $twig_vars["user"]['pseudo'] = " Mon compte";
+   $twig_vars["user"]["active"] = false;
 }
-/*echo $twig->render(array(
-  'user' => $user
-));
-*/

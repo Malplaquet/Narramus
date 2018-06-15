@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-
+<div class="corps">
+  <div class="bloc_texte">
+    {{ error["errorAccountExist"] }}{{ error["errorMissInput"] }}{{ error["errorPasswordDifferent"] }}
+  </div>
+</div>
 {% endblock %}
