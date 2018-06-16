@@ -23,10 +23,10 @@ $resultat = $req->fetch();
 
 $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
 
-if (!$resultat) {
+/*if (!$resultat) {
   $twig_vars['error']['errorWrongPassOrPseudo'] = 'Mot de passe ou pseudo incorrect';
 }
-else {
+else {*/
   if ($isPasswordCorrect) {
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['pseudo'] = $resultat['pseudo'];
@@ -34,8 +34,9 @@ else {
   }
   else {
     $_SESSION["id"] = 0;
+    $twig_vars['error']['errorWrongPassOrPseudo'] = 'Mot de passe ou pseudo incorrect';
   }
-}
+//}
 $req->closeCursor();
 
 echo $twig->render(

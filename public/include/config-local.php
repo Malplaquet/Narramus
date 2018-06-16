@@ -2,7 +2,7 @@
 $connectionParams = [ // [] revient à écrire array(..., ..., ...)
     'driver'    => 'pdo_mysql',
     'host'      => 'localhost',
-    'dbname'    => 'narrramus', // nom de la bdd
+    'dbname'    => 'narramus', // nom de la bdd
     'user'      => 'root', // nom de co de la bdd
     'password'  => '', // mdp de la bdd
     'charset'   => 'utf8mb4',
