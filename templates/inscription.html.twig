@@ -2,14 +2,42 @@
 {% block content %}
 <div class="corps">
   <div class="bloc_texte">
-    <form class="form_inscription" action="inscription_done.php" method="post">
-      <input type="text" id='pseudo' name="pseudo" placeholder="Votre pseudo" required>
-      <input type="password" id='pass' name="pass" placeholder="Votre mot de passe" required>
-      <input type="password" id='pass_repeat' name="pass_repeat" placeholder="Confirmez votre mot-de-passe" required>
-      <input type="text" id='mail' name="mail" placeholder="Votre adresse email" required>
-      <!--<div class="g-recaptcha" data-sitekey="6LfaWFkUAAAAALn3XwlrPtWESU-KSSn7gbac98Ah"></div>-->
-      <button type="submit" name="button_incription">Confirmer votre inscription</button>
-    </form>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <p class="title_create_account">Création d'un compte sur Narramus.fr</p>
+          <form class="form_create_account" action="inscription_done.php" method="post">
+            <label class="text_form" for="">Renseignez un pseudo :</label><br/>
+            <input class="input" type="text" id='pseudo' name="pseudo" placeholder="Votre pseudo" autofocus required><br/>
+            <label class="text_form" for="">Entrez votre mot de passe :</label><br/>
+            <input class="input" type="password" id='pass' name="pass" placeholder="Votre mot de passe" required><br/>
+            <label class="text_form" for="">Confirmez le mot de passe :</label><br/>
+            <input class="input" type="password" id='pass_repeat' name="pass_repeat" placeholder="Votre mot-de-passe" required><br/>
+            <label class="text_form" for="">Renseignez votre adresse mail</label><br/>
+            <input class="input" type="text" id='mail' name="mail" placeholder="Votre adresse email" required><br/>
+            <div class="g-recaptcha" data-sitekey="6LfaWFkUAAAAALn3XwlrPtWESU-KSSn7gbac98Ah"></div>
+            <button class="button_create_account" type="submit" name="button_incription">Confirmer votre inscription</button>
+          </form>
+        </div>
+        <div class="col-4 connexion_in_create_account">
+          <p class="title_connexion txt_justify_center">Se connecter</p>
+          <div class="text_form">
+            <p class="bold">Vous avez déjà un compte sur notre site?</p>
+            <p>Vous pouvez vous connecter en renseignant les champs du formulaire ci-dessous.</p>
+          </div>
+          <form class="form_connexion" action="connexion.php" method="post">
+            <label class="text_form">Entrez votre pseudo :</label><br/>
+            <input class="input" type="text" id="pseudo" name="pseudo" placeholder="pseudo" required><br/>
+            <span class="msg_error_connexion">{{ error["errorWrongPassOrPseudo"] }}</span>
+            <label class="text_form">Entrez votre mot de passe :</label>
+            <input class="input" type="password" id="pass" name="pass" placeholder="mot de passe" required><br/>
+            <span class="msg_error_connexion">{{ error["errorWrongPassOrPseudo"] }}</span>
+            <button class="button_connexion" type="submit" name="button">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 {% endblock %}

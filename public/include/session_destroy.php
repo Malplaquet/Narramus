@@ -1,10 +1,7 @@
 <?php
-
-if (session_status() === PHP_SESSION_ACTIVE){
+if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION["pseudo"])){
   session_destroy();
-  $twig_vars['user']['deconnexion'] = "Vous avez été correctement déconnecté(e) de Narramus.fr";
-} else {
-  $twig_vars['user']['nothingToDeco'] = nl2br("Vous ne pouvez pas vous déconnecter puisque vous n'avez pas de compte connecté.\nConnectez-vous où inscrivez-vous ci-dessous.");
+  $twig_vars['user']['deconnexion'] = "<p class=\"title_connexion\">Se déconnecter</p><br/><p class=\"txt_deconnexion\">Vous avez été correctement déconnecté(e) de Narramus.fr</p>";
 }
 
 if (session_status() === PHP_SESSION_ACTIVE && isset($_SESSION["pseudo"])) { // vérifie si la session existe bien, renvoie un booléen, sans ça, le session_destroy ne fait que désactiver le $_SESSION['pseudo'] sans le supprimer complétement

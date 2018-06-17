@@ -88,6 +88,27 @@ div h1{
   width: 100%;
   z-index: 100;
 }
+/* INSCRIPTION.php */
+.title_create_account{
+  margin: 2em 0 1em 0;
+  font-size: 2em;
+  color: red;
+  font-family: 'Mina', Arial, sans-serif;
+}
+.form_create_account{
+  margin: 1em 3em 5em 3em;
+}
+.g-recaptcha{
+  margin: 1em 0;
+}
+.connexion_in_create_account{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.txt_justify_center{
+  text-align: center;
+}
 /* CONNEXION.php */
 .title_connexion{
   margin: 1em 0;
@@ -103,18 +124,17 @@ div h1{
   text-align: justify;
   margin-top: 1em;
 }
-.input_pseudo{
+.input{
   margin-bottom: 1em;
   font-style: italic;
 }
-.input_pass{
-  margin-bottom: 1em;
-  font-style: italic;
+.msg_error_connexion{
+  color: red;
 }
 .button_deconnexion{
   height: 2em;
   width: 8em;
-  margin-top: 2em;
+  margin-top: 1em;
   color:#f1f2f6;
   background-color: #EA2027;
   border: none;
@@ -139,10 +159,12 @@ div h1{
   margin: 1em 3em 5em 3em;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .button_create_account{
   height: 2em;
+  width: 15em;
   color: #f1f2f6;
   background-color: #EA2027;
   border: none;
@@ -153,7 +175,7 @@ div h1{
 }
 
 /* DECONNEXION.php */
-.txt-deconnexion{
+.txt_deconnexion{
   margin: 2em 3em;
   font-size: 1.2em;
 }
@@ -333,11 +355,21 @@ div h1{
   font-size: 1.1em;
   text-align: center;
 }
+.captcha_contact{
+  display: flex;
+  justify-content: center;
+}
 .button_contact{
-  height: 1.5em;
+  height: 2em;
   width: 5em;
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1.1em;
+  color: #f1f2f6;
+  background-color: #EA2027;
+  border: none;
+  border-radius: 10px;
+}
+.button_contact:hover{
+  font-weight: bold;
 }
 .titre_redir{
   font-family: 'Mina', Arial, sans-serif;

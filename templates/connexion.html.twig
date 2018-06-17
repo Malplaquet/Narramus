@@ -3,23 +3,27 @@
 <div class="corps">
   <div class="bloc_texte">
     <div class="container">
-      <p class="txt-deconnexion">{{ error["errorWrongPassOrPseudo"] }}{{ status["connexion_ok"]}}</p>
-      <form class="form_deconnexion" action="deconnexion.php" method="post">
-        <button class="button_deconnexion" type="submit" name="button">Deconnexion</button>
-      </form>
-      <p class="title_connexion">Se connecter</p>
       <div class="row justify-content-around">
-        <div class="col-md-4">
+        <div class="col-4">
+          {% autoescape false %}{{ status["display_button_deconnexion"] }}{% endautoescape %}
+          <p class="title_connexion">Se connecter</p>
+          {% autoescape false %} {{ status["connexion_ok"]}} {{ status["already_connected"] }}{% endautoescape %}
           <form class="form_connexion" action="connexion.php" method="post">
-            <p class="text_form">Entrez votre pseudo :</p><input class="input_pseudo" type="text" id="pseudo" name="pseudo" placeholder="pseudo" required><br/>
-            <p class="text_form">Entrez votre mot de passe :</p><input class="input_pass" type="password" id="pass" name="pass" placeholder="mot de passe" required><br/>
-            <div class="div_button_connexion">
-              <button class="button_connexion" type="submit" name="button">Valider</button>
-            </div>
+            <label class="text_form">Entrez votre pseudo :</label><br/>
+            <input class="input" type="text" id="pseudo" name="pseudo" placeholder="pseudo" required><br/>
+            <span class="msg_error_connexion">{{ error["errorWrongPassOrPseudo"] }}</span>
+            <label class="text_form">Entrez votre mot de passe :</label><br/>
+            <input class="input" type="password" id="pass" name="pass" placeholder="mot de passe" required><br/>
+            <span class="msg_error_connexion">{{ error["errorWrongPassOrPseudo"] }}</span>
+            <div class="g-recaptcha" data-sitekey="6LfaWFkUAAAAALn3XwlrPtWESU-KSSn7gbac98Ah"></div>
+            <button class="button_connexion" type="submit" name="button">Valider</button>
           </form>
         </div>
-        <div class="col-md-4 redir_create_account">
-          <p class="text_form"><span class="bold">Vous n'avez pas de compte?</span><br/><br/>Vous pouvez vous créer un compte personnel gratuit sur Narramus.fr afin d'échanger avec la communauté.</p>
+        <div class="col-4 redir_create_account">
+          <div class="text_form">
+            <p class="bold txt_justify_center">Vous n'avez pas de compte?</p>
+            <p>Vous pouvez vous créer un compte personnel gratuit sur Narramus.fr afin d'échanger avec la communauté.</p>
+          </div>
           <a href="inscription.php"><button class="button_create_account" type="button" name="button" href="inscription_done.php">Se créer un compte</button></a>
         </div>
       </div>
