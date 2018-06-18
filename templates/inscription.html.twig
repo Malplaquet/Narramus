@@ -4,9 +4,10 @@
   <div class="bloc_texte">
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        {% autoescape false %} {{ error['MailMissing'] }}{{ error["errorAccountExist"] }}{{ error["errorMissInput"] }}{{ error["errorPasswordDifferent"] }}{{ user['account_created'] }} {% endautoescape %}
+        <div class="col-7">
           <p class="title_create_account">Création d'un compte sur Narramus.fr</p>
-          <form class="form_create_account" action="inscription_done.php" method="post">
+          <form class="form_create_account" action="inscription.php" method="post">
             <label class="text_form" for="">Renseignez un pseudo :</label><br/>
             <input class="input" type="text" id='pseudo' name="pseudo" placeholder="Votre pseudo" autofocus required><br/>
             <label class="text_form" for="">Entrez votre mot de passe :</label><br/>
@@ -15,11 +16,12 @@
             <input class="input" type="password" id='pass_repeat' name="pass_repeat" placeholder="Votre mot-de-passe" required><br/>
             <label class="text_form" for="">Renseignez votre adresse mail</label><br/>
             <input class="input" type="text" id='mail' name="mail" placeholder="Votre adresse email" required><br/>
+            {% autoescape false %} {{ error['InvalidEmail'] }} {% endautoescape %}
             <div class="g-recaptcha" data-sitekey="6LfaWFkUAAAAALn3XwlrPtWESU-KSSn7gbac98Ah"></div>
             <button class="button_create_account" type="submit" name="button_incription">Confirmer votre inscription</button>
           </form>
         </div>
-        <div class="col-4 connexion_in_create_account">
+        <div class="col-5 connexion_in_create_account">
           <p class="title_connexion txt_justify_center">Se connecter</p>
           <div class="text_form">
             <p class="bold">Vous avez déjà un compte sur notre site?</p>

@@ -109,6 +109,20 @@ div h1{
 .txt_justify_center{
   text-align: center;
 }
+.div_account_created{
+  color: black;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 3em;
+}
+.div_error_create_account{
+  color: red;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 3em;
+}
 /* CONNEXION.php */
 .title_connexion{
   margin: 1em 0;
