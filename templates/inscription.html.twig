@@ -18,6 +18,7 @@
             <input class="input" type="text" id='mail' name="mail" placeholder="Votre adresse email" required><br/>
             {% autoescape false %} {{ error['InvalidEmail'] }} {% endautoescape %}
             <div class="g-recaptcha" data-sitekey="6LfaWFkUAAAAALn3XwlrPtWESU-KSSn7gbac98Ah"></div>
+            <input type='hidden' name='process' value='1'>
             <button class="button_create_account" type="submit" name="button_incription">Confirmer votre inscription</button>
           </form>
         </div>
