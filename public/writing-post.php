@@ -15,6 +15,7 @@ $datetime = date('Y-m-d H:i:s');
 $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
+$datetime = date('Y-m-d H:i:s');
 $count=$conn->insert('publication', [
   'date_writing' => $datetime,
   'titre_publi' => $_POST['titre_publi'],

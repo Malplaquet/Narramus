@@ -14,6 +14,11 @@
     <div class="sommaire">
       <div class="container">
         <div class="row">
+          <div class="">
+            {% autoescape false %}{{ publi['date_writing'] }} {% endautoescape %}
+            {% autoescape false %}{{ publi['title_publi'] }} {% endautoescape %}
+            {% autoescape false %} {{ publi['corps_publi'] }} {% endautoescape %}
+          </div>
           <div class="col-md-3">
             <a class="illustation display_illustration" href="/publications/articles/Traversee_enivrante.php"><img class="illustration_traversee" src="/img/90-000981.jpg" title="Extrait du tableau &laquo; Port de Dieppe &raquo; par Joseph Vernet (1714-1789) peint en 1765, huile sur toile, 2.63m*1.65m, Photo (C) RMN-Grand Palais / image RMN-GP, Côte Cliché : 90-000981, Numéro d'inventaire : 5OA13" alt="Extrait du tableau &laquo; Port de Dieppe &raquo; par Joseph Vernet (1714-1789) peint en 1765, huile sur toile, 2.63m*1.65m, Photo (C) RMN-Grand Palais / image RMN-GP"></a>
           </div>
