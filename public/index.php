@@ -15,7 +15,7 @@ $conn = DriverManager::getConnection($connectionParams, $config);
 $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
 $twig = new Twig_Environment($loader);
 
-$req=$conn->executeQuery('SELECT * FROM publication');
+$req=$conn->executeQuery('SELECT * FROM publications');
 
 $req->rowCount();
 

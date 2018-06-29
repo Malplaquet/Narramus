@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<div class="corps">
+  <div class="bloc_texte">
+    <h2 class="titre_sommaire">Dernières publications :</h2>
+    <article class="article">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% for publication in publications %}
+            <div class="row">
+              <div class="col-12">
+                <p class="titre_article">{% autoescape false %} {{ publication.titre_publi }} {% endautoescape %}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <p class="date_publi"> Article publié le {% autoescape false %} {{ publication.date_writing }} {% endautoescape %}</p>
+              </div>
+            </div>
+              <div class="row">
+              <div class="col-12">
+                <div class="corps_publi">
+                  {% autoescape false %} {{ publication.corps_publi }} {% endautoescape %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}

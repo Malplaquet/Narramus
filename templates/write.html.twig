@@ -2,7 +2,8 @@
 {% block content %}
 <div class="corps">
   <div class="bloc_texte">
-    <form class="form_write" action="writing-post.php" method="post">
+    <h3>Rédiger une publication</h3>
+    <form class="form_write" action="writing-post.php" method="post" enctype="multipart/form-data">
       <label for="select_type" class="title_writing_page">Choisir la catégorie de publication :</label>
       <select class="select_type_write" name="type_publi">
         <option value="0">Article</option>
@@ -10,16 +11,16 @@
         <option value="2">Critique littéraire</option>
         <option value="3">Critique ciné/série</option>
       </select><br/>
-<!--      <label for="vignette">Vignette de la publication (max 1Mo)</label><br/>
+<!--  <label for="vignette">Vignette de la publication (max 1Mo)</label><br/>
       <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
       <input type="file" name="img_vignette" value="vignette" required><br/>
       <label for="alt">Description de la vignette (max 255 caractères) :</label><br/>
       <input type="text" name="alt_vignette" placeholder="Description de la vignette" required><br/>-->
-      <label for="publication" class="title_writing_page">Rédiger ci-dessous votre publication :</label><br/>
       <label for="title_publi" class="sub_title_writing_page">Choisissez un titre : (max 255 caractères)</label><br/>
       <input class="write_title" type="text" name="titre_publi" placeholder="Titre de la publication" autofocus required><br/>
       <label for="corps_publi" class="sub_title_writing_page">Rédigez le corps de texte :</label><br/>
-      <textarea class="write_area" id="corps_publi" name="corps_publi" rows="10" cols="100" placeholder="Corps de la publication" required></textarea><br/>
+      <label>(Merci de limiter votre premier paragraphe à 300 caractères)</label>
+      <textarea class="writing_area" id="corps_publi" name="corps_publi" required></textarea><br/>
       <input class="write_button" type="submit" name="button">
     </form>
   </div>

@@ -411,15 +411,31 @@ div h1{
   font-size: 1.2em;
 }
 
-/*article Vian*/
-
+/* publications */
 .article{
   text-align: justify;
-  margin: 1.9em 8.1em 3.1em 6.2em;
+  margin: 2em 3em;
   padding: 0;
   font-size: 1.2em;
 }
+.titre_article{
+  font-weight: bold;
+  font-family: 'Mina', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 2.5em;
+  line-height: 1.9em;
+  padding-left: 2%;
+}
+.date_publi{
+  padding-left: 2%;
+  margin-bottom: 2em;
+}
+.corps_publi{
+  text-indent: 2em;
+  line-height: 1.9em;
+}
 
+/*article Vian*/
 .illustration_article_containeur{
   display: flex;
   justify-content: center;
@@ -447,24 +463,6 @@ div h1{
 .credit{
   text-decoration: underline;
   font-weight: bold;
-}
-
-.date_publi{
-  text-indent: 0;
-  font-size: 1em;
-}
-
-.titre_article{
-  font-weight: bold;
-  font-family: 'Mina', Arial, sans-serif;
-  letter-spacing: 1px;
-  font-size: 2.5em;
-  padding-left: 1.2em;
-}
-
-article p{
-  text-indent: 3.1em;
-  line-height: 1.9em;
 }
 
 .titre_oeuvre{

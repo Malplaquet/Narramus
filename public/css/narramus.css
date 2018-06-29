@@ -477,22 +477,15 @@ align-items: center;
   font-weight: bold;
 }
 
-.date_publi{
+/*.date_publi{
   text-indent: 0;
-  font-size: 12px;
-}
+}*/
 
 .titre_article{
   font-weight: bold;
   font-family: 'Mina', Arial, sans-serif;
   letter-spacing: 1px;
   font-size: 25px;
-  padding-left: 10px;
-}
-
-article p{
-  text-indent: 30px;
-  line-height: 25px;
 }
 
 .titre_oeuvre{

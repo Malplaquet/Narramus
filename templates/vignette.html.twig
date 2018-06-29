@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<div class="corps">
+  <div class="bloc_texte">
+    <h2 class="titre_sommaire">Dernières publications :</h2>
+    <article class="article">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% for publication in publications %}
+            <div class="row">
+              <div class="col-12">
+                {% autoescape false %} {{ publication.titre_publi }} {% endautoescape %}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  {% autoescape false %} {{ publication.corps_publi|replace({ '</p>': '... Lire la suite</p>'}) }} {% endautoescape %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}
