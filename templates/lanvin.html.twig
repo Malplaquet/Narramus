@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+<div class="corps">
+  <div class="bloc_texte">
+    <article class="article">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {% for publication in publications %}
+            <div class="titre_article">
+              {% autoescape false %} {{ publication.titre_publi }} {% endautoescape %}
+            </div>
+            <div class="">
+              {% autoescape false %} {{ publication.date_writing }} {% endautoescape %}
+            </div>
+            <div class="">
+              {% autoescape false %} {{ publication.corps_publi }} {% endautoescape %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{% endblock %}

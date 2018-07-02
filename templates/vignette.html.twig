@@ -9,14 +9,15 @@
           <div class="col-12">
             {% for publication in publications %}
             <div class="row">
-              <div class="col-12">
-                {% autoescape false %} {{ publication.titre_publi }} {% endautoescape %}
+              <div class="col-3 media">
+                <img class="img-fluid align-self-center" src="{{ publication.img_vignette }}" alt="{{ publication.alt_vignette }}">
               </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <div>
-                  {% autoescape false %} {{ publication.corps_publi|replace({ '</p>': '... Lire la suite</p>'}) }} {% endautoescape %}
+              <div class="col-9">
+                <div class="titre_intro">
+                  {% autoescape false %} {{ publication.titre_publi }} {% endautoescape %}<br/>
+                </div>
+                <div class="intro_publi">
+                  {% autoescape false %} {{ publication.corps_publi|replace({ '</p>': '.. <a href="">Lire la suite</a></p>'}) }} {% endautoescape %}
                 </div>
               </div>
             </div>

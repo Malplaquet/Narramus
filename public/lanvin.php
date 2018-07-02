@@ -17,13 +17,11 @@ $twig = new Twig_Environment($loader);
 
 // Le LOCATE dans le SUBSTR cherche la balise fermante p dans l'entrée corps_publi et ajoute les trois caractère suivant pour que la sélection s'arrête bien après </p> et non pas dès <
 // le AS corps_publi renomme l'entrée pour qu'elle ne soit à appeller dans twig comme SUBSTR(`corps_publi`,1,LOCATE("</p>",`corps_publi`)+3)
-$req=$conn->executeQuery('SELECT SUBSTR(`corps_publi`,1,LOCATE("</p>",`corps_publi`)+3) AS corps_publi, `titre_publi`, `img_vignette`, `alt_vignette` FROM publications WHERE type_publi = :type_publi', [
-  'type_publi' => 0
-]);
+$req=$conn->executeQuery('SELECT `corps_publi`, `titre_publi`, `date_writing` FROM publications WHERE type_publi = 1');
 
 $twig_vars['publications'] = $req->fetchAll();
 
 echo $twig->render(
-  'article.html.twig',
+  'lanvin.html.twig',
   $twig_vars
 );
